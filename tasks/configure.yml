@@ -8,7 +8,7 @@
     owner: root
     group: root
     mode: 0644
-  notify: reload mongodb-server
+  notify: restart mongodb-server
 
 
 
