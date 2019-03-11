@@ -8,7 +8,7 @@
 
 - name: "Debian: Configure repo.mongodb.org apt repository"
   apt_repository:
-    repo: "{{ mongodb__apt_repo }}"
+    repo: "{{ mongodb__apt_repo[ ansible_distribution ] }}"
     state: present
     update_cache: yes
 
