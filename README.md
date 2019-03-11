@@ -22,6 +22,17 @@ This roles comes preloaded with almost every available default. You can override
 
 - `mongodb__version` - MongoDB software version to install. This select the stable branch to select for installation. `defaults to 4.0`. currently available: 3.2, 3.4, 3.6, 4.0.
 - `mongodb__packages` - MongoDB packages to install. `defaults to mongodb-org` which install everything. Can select the following: mongodb-org, mongodb-org-server, mongodb-org-mongos, mongodb-org-shell, mongodb-org-tools. see for details https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/.
+- `mongodb__conf_port` - Port mongod must bind to, `defaults to 27017`.
+- `mongodb__conf_bindIp` - Ip mongod must bind to, `defaults to 127.0.0.1`.
+- `mongodb__conf_extra` - Extra configuration options to set in mongod.conf. This must be a yaml configuration block understand by the daemon.
+```
+mongodb__conf_extra: |
+  net.ipv6: false
+  systemLog:
+    verbosity: 2
+    logRotate: reopen
+```
+
 
 Dependencies
 ------------
@@ -42,6 +53,7 @@ And add it to your play's roles:
       roles:
         - role enix.mongodb:
             mongodb__version: 4.0
+            mongodb__packages: ["mongodb-org-server", "mongodb-org-tools"]
 
 You can also use the role as a playbook. You will be asked which hosts to provision, and you can further configure the play by using `--extra-vars`.
 

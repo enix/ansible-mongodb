@@ -1,5 +1,15 @@
 ---
 
+- name: Configure global settings
+  template:
+    src: "mongod.conf.j2"
+    dest: "{{ mongodb__configfile }}"
+    backup: yes
+    owner: root
+    group: root
+    mode: 0644
+  notify: reload mongodb-server
+
 
 
 # - mark daemon as started if server installed

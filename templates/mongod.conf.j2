@@ -1,0 +1,27 @@
+{{ ansible_managed | comment }}
+# mongod.conf
+
+# for documentation of all options, see:
+#   http://docs.mongodb.org/manual/reference/configuration-options/
+
+storage:
+  dbPath: /var/lib/mongodb
+  journal:
+    enabled: true
+
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+
+net:
+  port: {{ mongodb__conf_port }}
+  bindIp: {{ mongodb__conf_bindIp }}
+
+processManagement:
+  timeZoneInfo: /usr/share/zoneinfo
+
+{% if mongodb__conf_extra is defined %}
+## Extra configuration block by mongodb__conf_extra
+{{ mongodb__conf_extra }}
+{% endif %}
