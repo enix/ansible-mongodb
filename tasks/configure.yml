@@ -12,4 +12,8 @@
 
 
 
-# - mark daemon as started if server installed
+- name: Start mongod daemon
+  service:
+    name: mongod
+    state: started
+    enabled: true
