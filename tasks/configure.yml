@@ -10,12 +10,9 @@
     mode: 0644
   notify: restart mongodb-server
 
-
-
 - name: Start mongod daemon
   service:
     name: "mongod"
     state: started
     enabled: yes
-  failed_when: false
-  changed_when: false
+  when: ansible_virtualization_type != "docker"
