@@ -4,6 +4,7 @@
 - name: restart mongodb-server
   become: yes
   service: name=mongod state=restarted
+  ignore_errors: ansible_virtualization_type == "docker"
 
 - name: reload mongodb-server
   become: yes

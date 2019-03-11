@@ -12,9 +12,9 @@
 
 
 
-# - name: Start mongod daemon
-#   service:
-#     name: "mongod"
-#     state: started
-#     enabled: yes
-#   changed_when: False
+- name: Start mongod daemon
+  service:
+    name: "mongod"
+    state: started
+    enabled: yes
+  ignore_errors: ansible_virtualization_type == "docker"
