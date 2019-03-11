@@ -14,6 +14,6 @@
 
 - name: Start mongod daemon
   service:
-    name: mongod
+    name: "mongod"
     state: started
-    # enabled: true
+    enabled: yes
