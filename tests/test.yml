@@ -2,7 +2,7 @@
 
 - hosts: test
   tasks:
-    - name: "Install missing packages"
+    - name: "Install Dependencies packages"
       apt:
         name: [ "gnupg", "dirmngr" ]
         state: present
