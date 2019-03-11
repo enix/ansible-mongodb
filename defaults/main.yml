@@ -2,3 +2,4 @@
 # defaults file for mongodb
 
 mongodb__version: 4.0
+mongodb__packages: "mongodb-org"

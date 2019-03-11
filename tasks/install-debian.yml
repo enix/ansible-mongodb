@@ -19,7 +19,5 @@
 
 - name: "Debian: Install mongodb packages"
   apt:
-    name: "mongodb-org"
+    name: "{{ mongodb__packages }}"
     state: present
-  # notify:
-  #   - restart mongodb-server

@@ -2,3 +2,4 @@
 - hosts: test
   roles:
     - role: '../../.'
+      mongodb__packages: ['mongodb-org-server', 'mongodb-org-shell', 'mongodb-org-tools']
