@@ -2,9 +2,9 @@
 # handlers file for mongodb
 
 - name: restart mongodb-server
-  sudo: yes
+  become: yes
   service: name=mongod state=restarted
 
 - name: reload mongodb-server
-  sudo: yes
+  become: yes
   service: name=mongod state=reloaded
