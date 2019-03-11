@@ -12,8 +12,9 @@
 
 
 
-- name: Start mongod daemon
-  service:
-    name: "mongod"
-    state: started
-    enabled: yes
+# - name: Start mongod daemon
+#   service:
+#     name: "mongod"
+#     state: started
+#     enabled: yes
+#   changed_when: False
