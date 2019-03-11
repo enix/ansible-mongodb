@@ -40,12 +40,8 @@ debian-stretch:
 
 ubuntu-bionic:
   image: ansiblecheck/ansiblecheck:ubuntu-bionic
-  variables:
-    ANSIBLE_PYTHON_INTERPRETER: /usr/bin/python3
   <<: *ansible_test
 
 ubuntu-xenial:
   image: ansiblecheck/ansiblecheck:ubuntu-xenial
-  variables:
-    ANSIBLE_PYTHON_INTERPRETER: /usr/bin/python3
   <<: *ansible_test
