@@ -1,0 +1,25 @@
+---
+
+# - name: "Debian: Install dirmngr"
+#   apt:
+#     name: dirmngr
+#     state: present
+
+- name: "Debian: Add repo.mongodb.org repository GPG key"
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 9DA31620334BD75D9DCB49F368818C72E52529D4
+    state: present
+
+- name: "Debian: Configure repo.mongodb.org apt repository"
+  apt_repository:
+    repo: "{{ mongodb__apt_repo }}"
+    state: present
+    update_cache: yes
+
+- name: "Debian: Install mongodb packages"
+  apt:
+    name: "mongodb-org"
+    state: present
+  # notify:
+  #   - restart mongodb-server

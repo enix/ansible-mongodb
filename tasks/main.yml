@@ -4,3 +4,6 @@
   fail:
     msg: "Not a supported MongoDB version {{ mongodb__version }}, supported: {{ mongodb__supported_version }}"
   when: mongodb__version not in mongodb__supported_version
+
+- include_tasks: install-debian.yml
+  when: ansible_os_family == 'Debian'
