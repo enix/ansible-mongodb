@@ -1,6 +1,6 @@
 ---
 
-- hosts: tests
+- hosts: test
   tasks:
     - name: "Install missing packages"
       apt:
