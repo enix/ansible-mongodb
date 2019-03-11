@@ -38,10 +38,10 @@ debian-stretch:
   image: ansiblecheck/ansiblecheck:debian-stretch
   <<: *ansible_test
 
-ubuntu-bionic:
-  image: ansiblecheck/ansiblecheck:ubuntu-bionic
-  <<: *ansible_test
-
-ubuntu-xenial:
-  image: ansiblecheck/ansiblecheck:ubuntu-xenial
-  <<: *ansible_test
+# ubuntu-bionic:
+#   image: ansiblecheck/ansiblecheck:ubuntu-bionic
+#   <<: *ansible_test
+#
+# ubuntu-xenial:
+#   image: ansiblecheck/ansiblecheck:ubuntu-xenial
+#   <<: *ansible_test
