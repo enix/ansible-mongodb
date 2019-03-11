@@ -1,4 +1,13 @@
 ---
+
+- hosts: tests
+  tasks:
+    - name: "Install missing packages"
+      apt:
+        name: [ "gpg", "dirmngr" ]
+        state: present
+
+
 - hosts: test
   roles:
     - role: '../../.'

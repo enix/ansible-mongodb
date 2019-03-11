@@ -1,10 +1,5 @@
 ---
 
-# - name: "Debian: Install dirmngr"
-#   apt:
-#     name: dirmngr
-#     state: present
-
 - name: "Debian: Add repo.mongodb.org repository GPG key"
   apt_key:
     keyserver: keyserver.ubuntu.com
