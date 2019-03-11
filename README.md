@@ -20,7 +20,7 @@ Role Variables
 
 This roles comes preloaded with almost every available default. You can override each one in your hosts/group vars, in your inventory, or in your play. See the annotated defaults in `defaults/main.yml` for help in configuration. All provided variables start with `mongodb__`.
 
-- `mongodb__` - desc
+- `mongodb__version` - MongoDB software version to install. This select the stable branch to select for installation. `defaults to 4.0`. currently available: 3.2, 3.4, 3.6, 4.0.
 
 Dependencies
 ------------

@@ -1,2 +1,4 @@
 ---
 # defaults file for mongodb
+
+mongodb__version: 4.0
