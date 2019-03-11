@@ -26,16 +26,16 @@ galaxy_info:
   #  - all
   #  - any
   - name: Ubuntu
-   versions:
+    versions:
   #  - all
-   - xenial
-   - bionic
+    - xenial
+    - bionic
   - name: Debian
-   versions:
+    versions:
   #  - all
   #  - sid
-   - jessie
-   - stretch
+    - jessie
+    - stretch
   #- name: EL
   #  versions:
   #  - all
