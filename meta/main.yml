@@ -1,0 +1,53 @@
+galaxy_info:
+  role_name: mongodb
+  author: Laurent Corbes
+  description: Ansible role to deploy mongodb software
+  company: Enix (http://www.enix.io)
+  # If the issue tracker for your role is not on github, uncomment the
+  # next line and provide a value
+  # issue_tracker_url: http://example.com/issue/tracker
+
+  license: license GPLv2
+
+  min_ansible_version: 2.4
+
+  #
+  # Below are all platforms currently available. Just uncomment
+  # the ones that apply to your role. If you don't see your
+  # platform on this list, let us know and we'll get it added!
+  #
+  platforms:
+  #- name: Fedora
+  #  versions:
+  #  - all
+  #  - 25
+  #- name: ArchLinux
+  #  versions:
+  #  - all
+  #  - any
+  - name: Ubuntu
+   versions:
+  #  - all
+   - xenial
+   - bionic
+  - name: Debian
+   versions:
+  #  - all
+  #  - sid
+   - jessie
+   - stretch
+  #- name: EL
+  #  versions:
+  #  - all
+  #  - 7
+  #- name: eos
+  #  versions:
+  #  - all
+  #  - Any
+
+  galaxy_tags:
+  - mongodb
+  - nosql
+  - database
+
+dependencies: []
