@@ -11,6 +11,7 @@
 - hosts: test
   roles:
     - role: '../../.'
+      mongodb__apt_localkey: true
       mongodb__packages: ['mongodb-org-server', 'mongodb-org-shell', 'mongodb-org-tools']
       mongodb__conf_bindIp: "0.0.0.0"
       mongodb__conf_extra: |

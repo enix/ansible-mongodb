@@ -6,4 +6,5 @@ mongodb__packages: "mongodb-org"
 mongodb__config_options: []
 mongodb__conf_port: 27017
 mongodb__conf_bindIp: 127.0.0.1
-#mongodb__conf_extra: 
+#mongodb__conf_extra:
+mongodb__apt_localkey: false
