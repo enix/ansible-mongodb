@@ -2,7 +2,7 @@
 
 - name: "Debian: Add repo.mongodb.org repository GPG key"
   apt_key:
-    keyserver: hpk://keyserver.ubuntu.com:80
+    keyserver: keyserver.ubuntu.com
     id: 9DA31620334BD75D9DCB49F368818C72E52529D4
     state: present
   when: not mongodb__apt_localkey
