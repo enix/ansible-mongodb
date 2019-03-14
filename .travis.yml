@@ -4,14 +4,15 @@ services: docker
 
 env:
   matrix:
-    - distribution: Ubuntu
-      distribution_version: xenial
-      init: /lib/systemd/systemd
-      run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
-    - distribution: Ubuntu
-      distribution_version: bionic
-      init: /lib/systemd/systemd
-      run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+# Disable for now. will switch to molecule
+    # - distribution: Ubuntu
+    #   distribution_version: xenial
+    #   init: /lib/systemd/systemd
+    #   run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+    # - distribution: Ubuntu
+    #   distribution_version: bionic
+    #   init: /lib/systemd/systemd
+    #   run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
     - distribution: Debian
       distribution_version: stretch
       init: /lib/systemd/systemd
@@ -31,8 +32,8 @@ script:
   # Start The Built Container In The Background
   - 'docker run --detach --volume="${PWD}":/etc/ansible/roles/role_under_test:ro ${run_opts} ansiblecheck/ansiblecheck:"${distribution,,}"-"${distribution_version}" "${init}" > "${container_id}"'
 
-  # Setup python if Ubuntu distribution
-  - test ${distribution} == "Ubuntu" && 'docker exec --tty "$(cat ${container_id})" ln -sf /usr/bin/python3 /usr/bin/python'
+  # # Setup python if Ubuntu distribution
+  # - test ${distribution} == "Ubuntu" && 'docker exec --tty "$(cat ${container_id})" ln -sf /usr/bin/python3 /usr/bin/python'
 
   # Ansible version check.
   - 'docker exec --tty "$(cat ${container_id})" env ANSIBLE_FORCE_COLOR=true ansible --version'
