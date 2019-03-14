@@ -62,13 +62,15 @@ You can also use the role as a playbook. You will be asked which hosts to provis
 Still to do
 -----------
 
-- Write the role itself, for one
+- Add support for clustering
+- Add support for sharding
+- Allow user and credentials management
 
 
 Changelog
 ---------
 
-### 0.1
+### 1.0
 
 Initial version.
 
