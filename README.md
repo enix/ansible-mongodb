@@ -21,7 +21,7 @@ Role Variables
 
 This roles comes preloaded with almost every available default. You can override each one in your hosts/group vars, in your inventory, or in your play. See the annotated defaults in `defaults/main.yml` for help in configuration. All provided variables start with `mongodb__`.
 
-- `mongodb__version` - MongoDB software version to install. This select the stable branch to select for installation. `defaults to 4.4`. currently available: 3.2, 3.4, 3.6, 3.8, 4.0, 4.2, 4.4.
+- `mongodb__version` - MongoDB software version to install. This select the stable branch to select for installation. `defaults to 4.2`. currently available: 3.2, 3.4, 3.6, 3.8, 4.0, 4.2, 4.4.
 - `mongodb__apt_localkey` - In case of system behind proxy it can be an issue to fetch repo key from keyserver. enabling this will use a local copy. Warning will maybe no longuer work if key is changed on remote repository. `defaults to false`.
 - `mongodb__packages` - MongoDB packages to install. `defaults to mongodb-org` which install everything. Can select the following: mongodb-org, mongodb-org-server, mongodb-org-mongos, mongodb-org-shell, mongodb-org-tools. see for details https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/.
 - `mongodb__conf_port` - Port mongod must bind to, `defaults to 27017`.
@@ -54,7 +54,7 @@ And add it to your play's roles:
     - hosts: all
       roles:
         - role: enix.mongodb
-            mongodb__version: 4.4
+            mongodb__version: 4.2
             mongodb__packages: ["mongodb-org-server", "mongodb-org-tools"]
 
 You can also use the role as a playbook. You will be asked which hosts to provision, and you can further configure the play by using `--extra-vars`.
