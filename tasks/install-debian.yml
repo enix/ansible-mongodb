@@ -8,7 +8,7 @@
 
 - name: "Debian: Add local repository GPG key"
   apt_key:
-    data: "{{ lookup('file', 'server-'+ str(mongodb__version) +'.asc') }}"
+    data: "{{ lookup('file', mongodb__apt_keyfile) }}"
     state: present
   when: mongodb__apt_localkey
 

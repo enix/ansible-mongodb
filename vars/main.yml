@@ -7,3 +7,4 @@ mongodb__apt_repo:
   Ubuntu: "deb http://repo.mongodb.org/apt/ubuntu {{ ansible_distribution_release }}/mongodb-org/{{ mongodb__version }} multiverse"
 mongodb__configfile: "/etc/mongod.conf"
 mongodb__apt_keyurl: "https://www.mongodb.org/static/pgp/server-{{ mongodb__version }}.asc"
+mongodb__apt_keyfile: "server-{{ mongodb__version }}.asc"
