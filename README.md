@@ -52,7 +52,7 @@ And add it to your play's roles:
 
     - hosts: all
       roles:
-        - role enix.mongodb:
+        - role: enix.mongodb
             mongodb__version: 4.0
             mongodb__packages: ["mongodb-org-server", "mongodb-org-tools"]
 
