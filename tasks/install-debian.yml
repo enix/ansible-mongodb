@@ -22,3 +22,4 @@
   apt:
     name: "{{ mongodb__packages }}"
     state: present
+    update_cache: yes
