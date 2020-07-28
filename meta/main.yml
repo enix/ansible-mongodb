@@ -36,6 +36,7 @@ galaxy_info:
   #  - sid
     - jessie
     - stretch
+    - buster
   #- name: EL
   #  versions:
   #  - all

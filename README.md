@@ -13,6 +13,7 @@ Supported targets:
 - Ubuntu 18.04 "Bionic"
 - Debian 8 "Jessie"
 - Debian 9 "Stretch"
+- Debian 10 "Buster"
 
 
 Role Variables
