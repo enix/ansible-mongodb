@@ -72,6 +72,12 @@ Still to do
 Changelog
 ---------
 
+### 1.2.0
+
+Add support for debian buster
+Add support for newer mongodb versions (4.2, 4.4)
+
+
 ### 1.1.0
 
 Add support for local gnupg key
